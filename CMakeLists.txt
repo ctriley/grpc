@@ -70,12 +70,7 @@ endif()
 set(gRPC_ZLIB_PROVIDER "module" CACHE STRING "Provider of zlib library")
 set_property(CACHE gRPC_ZLIB_PROVIDER PROPERTY STRINGS "module" "package")
 
-find_package(c-ares)
-if(c-ares_FOUND)
-    set(gRPC_CARES_PROVIDER "package" CACHE STRING "Provider of c-ares library")
-else()
-    set(gRPC_CARES_PROVIDER "module" CACHE STRING "Provider of c-ares library")
-endif()
+set(gRPC_CARES_PROVIDER "module" CACHE STRING "Provider of c-ares library")
 set_property(CACHE gRPC_CARES_PROVIDER PROPERTY STRINGS "module" "package")
 
 set(gRPC_RE2_PROVIDER "module" CACHE STRING "Provider of re2 library")
